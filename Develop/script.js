@@ -15,7 +15,7 @@ var clockDisplay = document.getElementById('currentDay');
 var currentTime = DateTime.local().toLocaleString(DateTime.DATETIME_FULL);
 // this.localDateTime = DateTime.local().toLocaleString(DateTime.DATETIME_FULL);
 console.log(currentTime);
-clockDisplay.textContent = currentTime;
+clockDisplay.textContent = currentTime; 
 // $("#currentDay").html(currentTime);
 
 // WHEN I scroll down

@@ -3,7 +3,7 @@
 // var day = (dt.toFormat('EEEE, MMMM YYYY'));
 // var time = (dt.toFormat('hh:mm a'));
 // var currentTime = dt.toISO();
-$(document).ready(function {
+$(document).ready(function () {
     console.log("page loaded");
     var DateTime = luxon.DateTime;
     // THEN the current day is displayed at the top of the calendar
@@ -20,24 +20,20 @@ let time = setInterval(clockReset, 1000);
 function clockReset(){
     currentTime = clockDisplay.textContent;
 }
-});
-
-// WHEN I scroll down
-// THEN I am presented with time blocks for standard business hours
-// WHEN I view the time blocks for that day
-
 //Document Ready Event: https://www.w3schools.com/jquery/jquery_syntax.asp
     // WHEN I click the save button for that time block
     // Use JQuery to select all saveBtn on click
-    $('.saveImg').on("click", function () {
-        let inputText = $('.textSpace').val;
-        localStorage.setItem("hour")
+    $('.saveBtn').on("click", function () {
+        var hourId = $(this).parent().attr('id');
+       let inputText=  $(this).siblings('.textSpace').val();
+        //let inputText = $('.textSpace').val;
+        localStorage.setItem(hourId, inputText)
     // assign events var as sibliing  attribute
-    var todo = $(this).siblings(".textSpace").val();
-    console.log(todo);
-    // assign hour var as parent attribute 
-    var hour = $(this).parent().attr("id");
-    localStorage.setItem(hour, todo);
+    // var todo = $(this).siblings(".textSpace").val();
+    // console.log(todo);
+    // // assign hour var as parent attribute 
+    // var hour = $(this).parent().attr("id");
+    // localStorage.setItem(hour, todo);
     });
 // THEN the text for that event is saved in local storage
 // WHEN I refresh the page
@@ -68,4 +64,11 @@ $('.row').each(function() {
         $(this).addClass('.future')
     }
 });
+});
+
+// WHEN I scroll down
+// THEN I am presented with time blocks for standard business hours
+// WHEN I view the time blocks for that day
+
+
 

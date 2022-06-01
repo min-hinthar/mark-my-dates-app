@@ -1,6 +1,8 @@
 # mark-my-dates-app
 I have been tasked to create a simple work plan scheduler to save events in an hourly block calendar. I will be using Luxon instead of moment.js to track current time and user input will be saved locally, color-coded to indicate current hour, past hour and future hour. Saved events should persist when page refreshes.
 
+![Getting Started](.develop/screenshot.jpg)
+
 User Story
 AS AN employee with a busy schedule
 I WANT to add important events to a daily planner

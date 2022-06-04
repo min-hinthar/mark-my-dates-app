@@ -5,7 +5,7 @@ body {
 }
 
 textarea{
-  background-image: repeating-radial-gradient(rgb(255, 181, 43), rgb(211, 79, 211));
+  /* background-image: repeating-radial-gradient(rgb(255, 181, 43), rgb(211, 79, 211)); */
   border: solid maroon;
   resize: none;
   color: #000000;
